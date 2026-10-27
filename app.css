@@ -1,0 +1,29 @@
+:root{--bg:#f6f5f1;--card:#fff;--text:#1d1d1b;--muted:#6b6a65;--accent:#3b5bdb;--accent-text:#fff;--border:#d9d7cf;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17171a;--card:#222227;--text:#f0efea;--muted:#9a99a0;--accent:#7c93ff;--accent-text:#10121c;--border:#383840}}
+:root[data-theme="dark"]{--bg:#17171a;--card:#222227;--text:#f0efea;--muted:#9a99a0;--accent:#7c93ff;--accent-text:#10121c;--border:#383840}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:640px;margin:0 auto;padding:24px 16px}
+h1{font-size:1.4rem;margin:0 0 16px}
+.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin-bottom:20px}
+label{display:flex;flex-direction:column;font-size:.8rem;color:var(--muted);gap:4px}
+select,button{font:inherit;font-size:1rem;padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text)}
+button{background:var(--accent);color:var(--accent-text);border-color:transparent;cursor:pointer;font-weight:600}
+button:active{transform:scale(.97)}
+table{width:100%;border-collapse:separate;border-spacing:8px}
+td{background:var(--card);border:1px solid var(--border);border-radius:12px;text-align:center;
+font-size:clamp(1.1rem,4.5vw,1.7rem);font-weight:600;padding:22px 4px;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}
+p.note{color:var(--muted);font-size:.85rem}
+button.ghost{background:var(--card);color:var(--text);border:1px solid var(--border)}
+[hidden]{display:none!important}
+#kb{margin-top:20px}
+#kbpanel{margin-top:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:8px}
+#kbtitle{font-weight:600;margin-bottom:2px}
+#kbsvg{width:100%;height:auto;display:block}
+.wk{fill:#fafafa;stroke:#8d8d8d;stroke-width:1}
+.wk.on{fill:#12a0f0}
+.bk{fill:#1d1d1d}
+.bk.on{fill:#12a0f0;stroke:#000;stroke-width:2;paint-order:stroke}
+.gt{font-size:12px;font-weight:600;fill:var(--muted)}
+.lbl{font-size:13px;font-weight:600;text-anchor:middle;pointer-events:none;fill:#fff}

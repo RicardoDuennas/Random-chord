@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chord Shuffler</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#17171a">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="app.css">
+<script src="theme-init.js"></script>
+</head>
+<body>
+<main>
+<h1>Chord Shuffler</h1>
+<div class="controls">
+<label>Base key<select id="key"></select></label>
+<label>Chord type<select id="type"></select></label>
+<label>Theme<select id="theme" autocomplete="off"><option value="auto">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
+<button id="shuffle">Shuffle</button>
+<button id="random">Random</button>
+</div>
+<table id="grid"></table>
+<p class="note">All 12 roots in the chosen chord type, in random order.</p>
+<section id="kb">
+<button id="kbbtn" class="ghost" aria-expanded="false">Show keyboard</button>
+<div id="kbpanel" hidden>
+<div id="kbtitle"></div>
+<svg id="kbsvg" viewBox="0 0 630 340" role="img" aria-label="Piano keyboard with the chord notes highlighted"></svg>
+</div>
+</section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
